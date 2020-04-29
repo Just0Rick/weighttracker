@@ -16,5 +16,12 @@
     "ES6"
   ],
   "author": "Ricardo José Guevara Aragón",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "jest": "^25.5.1"
+  }
 }
