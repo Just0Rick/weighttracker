@@ -16,7 +16,8 @@ class StringManager{
         }
     }
 
-    getString(key, lang){
+    getString(key){
+        let lang = Config.currentLanguage;
         if(Object.getOwnPropertyNames(this.hashTable).includes(lang) && 
         Object.getOwnPropertyNames(this.hashTable[lang]).includes(key)){
             return this.hashTable[lang][key];
