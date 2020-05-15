@@ -1,4 +1,7 @@
 module.exports = {
     currentLanguage: 'en',
-    availableLanguages: ['en', 'es']
+    availableLanguages: {
+        en: "en",
+        es: "es"
+    }
 };

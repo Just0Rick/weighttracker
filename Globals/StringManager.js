@@ -3,9 +3,10 @@ const Config = require('./Config');
 class StringManager{
     constructor(availableLangs){
         this.availableLangs = availableLangs;
+        let temporary = Object.getOwnPropertyNames(availableLangs);
         this.hashTable = {};
-        for(let i = 0; i < availableLangs.length; i++){
-            this.hashTable[availableLangs[i]] = {};
+        for(let i = 0; i < temporary.length; i++){
+            this.hashTable[temporary[i]] = {};
         }
     }
 
@@ -25,7 +26,8 @@ class StringManager{
             if(Object.getOwnPropertyNames(this.hashTable['en']).includes(key)){
                 return this.hashTable['en'][key];
             } else {
-                throw new Error('La clave solicitada no existe!');
+                console.error("- - - ERROR: The requested key does not exist! - - -");
+                return key;
             }
         }
     }
